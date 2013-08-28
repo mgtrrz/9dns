@@ -34,7 +34,7 @@ if (isset($domain) && $domain != "") {
     $whoisDomain = new Whois();
     $whoisresult = $whoisDomain->Lookup($domain);
     
-    $myFile = "query_log";
+    $myFile = "/home/mk9/query_log";
     $fh = fopen($myFile, 'a') or error_log("Cannot write to log file.",0);
     $stringData = date("Y-m-d H:i:s")."\t".$_SERVER['REMOTE_ADDR']."\t".$subdomainsDetected.$domain."\n";
     fwrite($fh, $stringData);
