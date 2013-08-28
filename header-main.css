@@ -1,0 +1,55 @@
+#header {
+    /* Using Margins here will push everything down, including the stupid footer */
+    padding-top:60px;
+}
+
+#header h1 {
+    font-family: 'Open Sans', sans-serif; 
+	font-weight:300;
+	font-size:64px;
+	text-align:center;
+	margin:0;
+}
+
+#header p {
+	font-family: 'Open Sans', sans-serif; 
+	font-weight:300;
+	font-size:16px;
+	text-align:right;
+	margin:0;
+	margin-right:40px;
+}
+
+#header a {
+	color:#666;
+}
+
+.fade {
+	margin:0px;
+	padding:0px;
+   opacity: 1;
+   transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+}
+
+.fade:hover {
+   opacity: 0.5;
+}
+
+#entry {
+	/*font-weight:300;*/
+    padding-top:40px;
+    margin:auto;
+	width:500px;
+
+}
+
+#form_options {
+	padding:10px;
+	margin-top:0px;
+}
+
+.form-control {
+    width:90%;
+}

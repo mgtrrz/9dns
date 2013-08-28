@@ -1,0 +1,26 @@
+<div id="options_box">
+                    <a href="#" id="toggle">Options</a>
+                
+                    <div id="div_options" class="toggle" style="display:none;">
+                        <ul id="options">
+                            <li>
+                                <input type="checkbox" name="dig" id="dig">
+                                <label for="encodeURL">Show Equivalent Dig Commands</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="help" id="help">
+                                <label for="encodePage">Show Help Tooltips</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="extended" id="extended">
+                                <label for="showForm">Show Extended Analysis</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="nothing" id="nothing">
+                                <label for="allowCookies">Do Nothing</label>
+                            </li>
+                        </ul>
+                
+                
+                    </div><!-- /div_options -->
+                </div><!-- /options_box -->

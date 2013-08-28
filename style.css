@@ -1,0 +1,193 @@
+html,
+body {
+  height: 100%;
+  padding-bottom: 40px;
+  color: #5a5a5a;
+  font-family: 'Open Sans', sans-serif;
+  font-weight:300;
+  /* The html and body elements cannot have any padding or margin. */
+}
+
+/* Wrapper for page content to push down footer */
+#wrap {
+  min-height: 100%;
+  width:600px;
+  height: auto !important;
+  height: 100%;
+  /* Negative indent footer by its height */
+  margin: 0 auto -160px;
+  /* Pad bottom by footer height */
+  padding: 0 0 160px;
+}
+
+a {
+	text-decoration:none;
+	color:#002C8A;
+	transition:.25s ease-in-out;
+   -moz-transition:.25s ease-in-out;
+   -webkit-transition:.25s ease-in-out;
+}
+
+a:hover {
+	color:#51ACFC;
+}
+
+ul {
+	list-style-type:none;
+	padding:0;
+	margin:0;
+}
+
+::selection {
+	background: #ffb7b7; /* Safari */
+}
+::-moz-selection {
+	background: #ffb7b7; /* Firefox */
+}
+
+#wrapper {
+	width:600px;
+	margin:auto;
+
+}
+
+#header {
+	width:600px;
+	margin:auto;
+
+}
+
+#header h1 {
+	font-family: 'Open Sans', sans-serif; 
+	font-weight:300;
+	font-size:64px;
+	text-align:center;
+	margin:0;
+	margin-top:40px;
+}
+
+#header p {
+	font-family: 'Open Sans', sans-serif; 
+	font-weight:300;
+	font-size:16px;
+	text-align:right;
+	margin:0;
+	margin-right:40px;
+}
+
+#header a {
+	color:#666;
+}
+
+.fade {
+	margin:0px;
+	padding:0px;
+   opacity: 1;
+   transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+}
+
+.fade:hover {
+   opacity: 0.5;
+}
+
+#search_bar {
+	font-weight:300;
+	width:600px;
+	padding-left:0px;
+	margin-top:20px;
+	text-align:center;
+}
+
+#form_options {
+	padding:10px;
+	margin-top:0px;
+}
+
+#footer {
+	width:600px;
+	margin-top:50px;
+	font-size:12px;
+        padding:5px;
+	text-align:center;
+}
+
+#error {
+	margin-top:10px;
+	background-color:#E36868;
+	color:white;
+	padding:5px;
+}
+
+
+/* TOOLTIP HOVER EFFECT */
+#tooltip{ 
+	padding:5px;
+    width:20em; 
+	background: #fff;
+	border:1px solid black;
+}
+
+
+/* INPUT AND BUTTON STYLES */
+
+.btn {
+	padding: 5px 12px;
+	text-shadow: none;
+	background-image: none;
+	background-color:#0f82f5;
+	color:white;
+	border: none;
+	height:34px;
+	width:90px;
+	font-size:1em;
+	cursor:pointer;
+    transition: background-color .25s ease-in-out;
+    -moz-transition: background-color .25s ease-in-out;
+    -webkit-transition: background-color .25s ease-in-out;
+}
+
+.btn:hover {
+    background-color:#A6C2FF;
+}
+
+.textInput {
+	padding: 5px;
+	font-family:inherit;
+	font-weight:inherit;
+	border: 1px solid black;
+	background:white;
+	color: black;
+	font-size: 1em;
+}
+
+/* Set the fixed height of the footer here */
+#footer {
+  height: 60px;
+  width:100%;
+  background-color: #666;
+}
+
+/* Lastly, apply responsive CSS fixes as necessary */
+@media (max-width: 767px) {
+  #footer {
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+.container {
+  width: auto;
+  max-width: 680px;
+  padding: 0 15px;
+}
+.container .credit {
+  margin: 20px 0;
+}
