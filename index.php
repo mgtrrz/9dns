@@ -13,9 +13,7 @@ if (isset($_SERVER['REQUEST_URI'])) {
 	
 	if ($catch != "index.php") {
 		$domain = $catch;
-	} else {
-		// Do nothing.
-	} 
+	}
 }
 
 ?>
@@ -55,20 +53,21 @@ class="fade">.</span><span class="fade">m</span><span class="fade">e</span>
             </div><!-- /header -->
             
             <div id="entry">
-            
+                
                 <form class="form-inline" role="form"  method="post">
                     <div>
                         <div class="input-group">
                             <input type="text" class="form-control" name="domain" placeholder="<?php if(isset($domain) && $domain != ""){echo $domain;} else {echo "google.com";}  ?>">
                                 <span class="input-group-btn">
-                                    <button class="btn btn-default" type="button">Go</button>
+                                    <button class="btn btn-default" type="button submit" value="Submit">Go</button>
                                 </span>
                         </div>
                         
                     </div>
                 </form>
-            </div><!-- /entry -->
-            
+
+                    </div><!-- /entry -->
+
             <div id="results">
             
                 <?php include('ping.php'); ?>

@@ -35,8 +35,8 @@ if (isset($domain) && $domain != "") {
     $whoisresult = $whoisDomain->Lookup($domain);
     
     $myFile = "query_log";
-    $fh = fopen($myFile, 'a') or die("can't open file");
-    $stringData = date("Y-m-d H:i:s")."\t".$_SERVER['REMOTE_ADDR']."\t".$domain."\n";
+    $fh = fopen($myFile, 'a') or error_log("Cannot write to log file.",0);
+    $stringData = date("Y-m-d H:i:s")."\t".$_SERVER['REMOTE_ADDR']."\t".$subdomainsDetected.$domain."\n";
     fwrite($fh, $stringData);
 	
     if ($domain == "about") {
@@ -53,6 +53,9 @@ if (isset($domain) && $domain != "") {
         } else {
             echo "markg90@gmail.com";
         }
+        echo "<br><br>";
+        echo "// Source<br>";
+        echo "This tool is written in PHP. See the (terribly) written code at <a href=\"https://bitbucket.org/marknine/dns.mk9.me\">Bitbucket</a>!";
         echo "<br>";
         
     } elseif ($whoisresult['regrinfo']['registered'] == 'unknown') {
@@ -189,14 +192,20 @@ if (isset($domain) && $domain != "") {
         $wwwdomain = "www.".$domain;
     	$dnsCNAME = dns_get_record($wwwdomain,DNS_CNAME);
         
+        if ($comment != 0) { if (!empty($subdomainsDetected)) { echo "// www CNAME for $domain<br>" ; } else { echo "// www CNAME<br>"; }}
         if (!empty($dnsCNAME)) {
-            if ($comment != 0) { if (!empty($subdomainsDetected)) { echo "// www CNAME for $domain<br>" ; } else { echo "// www CNAME<br>"; }}
+            
     	    if ($dig) { echo "dig a $wwwdomain +short<br>"; }
             $dnsCNAMEpointsto = dns_get_record($wwwdomain,DNS_A);
             echo $dnsCNAME[0][target]."    ->    ".$dnsCNAMEpointsto[0][ip];
             //print_r($dnsCNAME);
     	    echo "<br><br><br>";
-        } else { $dnsArrayWasEmpty++; }
+        } else { 
+            $dnsArrayWasEmpty++; 
+            echo "[*] No www CNAME records found";
+            echo "<br><br><br>";
+        }
+        
         
     	
     	// Getting MX records
@@ -214,8 +223,9 @@ if (isset($domain) && $domain != "") {
     	    echo "<br><br>";
         } else { $dnsArrayWasEmpty++; }
     	
+    	
+    	
     	// Getting TXT records
-    
     	
     	$dnsTXT = dns_get_record($domain,DNS_TXT);
         if (!empty($dnsTXT)) {
@@ -227,6 +237,7 @@ if (isset($domain) && $domain != "") {
     	    }
             echo "<br><br>";
         } else { $dnsArrayWasEmpty++; }
+    
     
     
     	// Getting SOA record

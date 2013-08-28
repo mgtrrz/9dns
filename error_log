@@ -1,0 +1,9 @@
+[28-Aug-2013 08:31:22 Europe/Moscow] PHP Warning:  Invalid argument supplied for foreach() in /home/mk9/public_html/dns/ping.php on line 85
+[28-Aug-2013 08:38:48 Europe/Moscow] PHP Warning:  Invalid argument supplied for foreach() in /home/mk9/public_html/dns/ping.php on line 85
+[28-Aug-2013 08:39:01 Europe/Moscow] PHP Warning:  Invalid argument supplied for foreach() in /home/mk9/public_html/dns/ping.php on line 85
+[28-Aug-2013 00:29:46 America/Chicago] PHP Warning:  fopen(query_log) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: Permission denied in /home/mk9/public_html/dns/ping.php on line 38
+[28-Aug-2013 00:29:46 America/Chicago] Cannot write to log file.
+[28-Aug-2013 00:29:46 America/Chicago] PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in /home/mk9/public_html/dns/ping.php on line 40
+[28-Aug-2013 00:32:00 America/Chicago] PHP Warning:  fopen(query_log) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: Permission denied in /home/mk9/public_html/dns/ping.php on line 38
+[28-Aug-2013 00:32:00 America/Chicago] Cannot write to log file.
+[28-Aug-2013 00:32:00 America/Chicago] PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in /home/mk9/public_html/dns/ping.php on line 40
